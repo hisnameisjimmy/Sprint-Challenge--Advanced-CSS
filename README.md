@@ -34,13 +34,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Fully responsive sites take a mix of adaptive elements (breakpoints) and fluid elements (percentage widths) to make it so the site easily adapts from desktop to mobile without hidding weird 'uncanny valley' areas. 
+
+An adaptive website purely uses breakpoints, so the transitions between screensizes is more harsh and can lead to weird middle-ground type situations.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile first means that your css base state is for the mobile view, and you override or add to those properties with desktop media queries (generally using min-width). Desktop first is the opposite, utilizing max-width media queries to override or 'unset' desktop based css.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+The default font-size in browsers is 16px, but overriding that with 62.5% makes it so you can use rem units that are numerically aligned with pixel sizes. Ie, 16px = 1.6rem.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing is css with the ability to use variables and simple functional elements to make writing css modular, easier to update, and less repetitive/tedius. Basically, there's a lot of stuff that you're doing over and over again in CSS and it espouses DRY principles (don't repeat yourself) to reduce that tedium.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+I have mixed feelings about preprocessing, but that's because I've been doing this a while and I like Trello's CSS structure. They subscribe to a model that says use the nice, least clever parts of things like less or sass, but leave out the stuff that can start to make your css difficult for newcomers to understand. There can also be major problems with nesting if you change html structure down the road. You may benefit from the initial buildout, but maintenance can be difficult. 
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
