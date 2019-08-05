@@ -162,17 +162,24 @@ p {
 }
 nav {
   padding: 15px 0;
-  background: #f6f6f6;
+  background: rgba(246, 246, 246, 0.5);
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 nav .logo {
   text-align: center;
   font-size: 4rem;
+  animation: fadeInDown 0.5s 1;
+  animation-delay: 1s;
 }
 nav .nav-links {
   display: flex;
   justify-content: space-around;
   width: 50%;
   margin: 15px auto 0;
+  animation: fadeInDown 0.5s 1;
+  animation-delay: 1.25s;
 }
 @media only screen and (max-width: 500px) {
   nav .nav-links {
@@ -181,6 +188,16 @@ nav .nav-links {
 }
 nav .nav-links a {
   font-size: 1.6rem;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 footer {
   color: #22283B;
