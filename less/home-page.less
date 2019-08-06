@@ -3,7 +3,10 @@
 .home {
 
   .intro {
-
+    margin-top: 101px;
+    .header-image {
+      width: 100%;
+    }
     h2 {
       padding: 15px;
     }
@@ -18,12 +21,26 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
+    .blast {
+    }
+    .sky {
+      @media @phone {
+        display: none;
+      }
+    }
+    .launch {
+      @media @phone {
+        display: none;
+      }
+    }
     img {
       width: 28%;
       margin: 20px 2.5%;
-      border-radius: 20px;
+      .radius(20px);
       height: 100%;
+      @media @phone {
+        width: 100%;
+      }
     }
   }
 
@@ -45,10 +62,15 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
+    @media @phone {
+      padding: 10px;
+      flex-direction: column-reverse;
+    }
     .walk-text {
       width: 50%;
-
+      @media @phone {
+        width: 100%;
+      }
       h3 {
         margin-bottom: 10px;
       }
@@ -58,17 +80,30 @@
       }
 
       .btn {
+        .button(5px, @wild-sand, 10px 20px, @ebony-clay, 1.8rem, unset);
+        display: inline-block;
+        &:hover {
+          .button(5px, @ebony-clay, 10px 20px, @wild-sand, 1.8rem, unset);
+        }
+        @media @phone {
+          .button(5px, @wild-sand, 20px, @ebony-clay, 1.8rem, unset);
+          display: block;
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+      @media @phone {
+        padding: 2.5%;
+        width: 100%;
+        margin-left: unset;
+      }
       img {
         width: 100%;
         height: auto;
-        border-radius: 10px;
+        .radius(10px);
       }
     }
   }
